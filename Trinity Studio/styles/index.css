@@ -273,7 +273,8 @@ nav button .kanan {
       width: 100%;
     }
     .bagian-kanan {
-      width: 100vw;
+      width: 90vw;
+      max-width: 90vw;
     }
 }
 /* Mobile */
