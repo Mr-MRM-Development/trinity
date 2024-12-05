@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+	<meta http-equiv="CONTENT-TYPE" content="text/html; charset=UTF-8">
+	<link rel="icon" href="icon.png">
+	<link rel="stylesheet" href="styles/style.css"/>
+	<title>TCE</title>
+</head>
+<body>
+	<header>
+		<h1>TRINITY <span>CODE</span> EDITOR</h1>
+	</header>
+	<nav>
+		<a href="../index.html">
+			<button title="Keluar">
+				<img src="../assets/global img/close.png">
+			</button>
+		</a>
+		<button onclick="baru()" title="Baru">
+			<img src="../assets/global img/baru.png">
+		</button>
+		<button onclick="mulai_simpan()" title="Simpan">
+			<img src="../assets/global img/save.png">
+		</button>
+		<button onclick="buka()" title="Buka">
+			<img src="../assets/global img/open.png">
+		</button>
+		<a href="../Trinity Web Maker/index.html">
+			<button title="Trinity Website Maker">
+				<img src="../assets/global img/WE.png">
+			</button>
+		</a>
+	</nav>
+	<div class="content">
+		<textarea id="code" onclick="filter()" placeholder="Tuliskan Codinganya !"></textarea>
+												
+	</div>
+	
+	<div id="pilih">
+		<h2>Pilih File</h2><br>
+		<input type="file" id="sumberfile"><br>
+		<button onclick="readFile()">Buka</button>
+		<button onclick="batal()">Batal</button>
+	</div>
+	
+	<div id="pilih-simpan">
+		<h2>Namai File</h2><br>
+		<input type="Text" id="nama" placeholder="Nama.Extensi"><br>
+		<button onclick="simpan()">Simpan</button>
+		<button onclick="batal_simpan()">Batal</button>
+	</div>
+	
+	<footer id="foot">Empety</footer>
+	
+	<script src="scripts/script.js"></script>
+	<script src="scripts/filter.js"></script>
+</body>
+</html>

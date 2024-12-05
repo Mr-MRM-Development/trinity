@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+						<meta http-equiv="CONTENT-TYPE" content="text/html; charset=UTF-8">
+						<link rel="icon" href="icon.png">
+						<style>
+*,html{
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  background: #000;
+}
+
+header {
+  padding: 50px 0;
+  background: green;
+  color: white;
+  text-align: center;
+  font-size: 35px;
+}
+
+header span{
+  color: red;
+}
+
+nav {
+  background: #444;
+  padding: 12px;
+  display: fixed;
+}
+
+nav button{
+  padding:10px;
+  margin: 0 12px;
+  border: none;
+  border-radius: 6px;
+  color: white;
+  background: #4da;
+  font-size: 35px;
+  transition: 0.3s;
+}
+
+nav button:hover {
+  background: #4ad;
+}
+
+.content {
+  background: #666;
+  border: solid 3px white;
+  border-radius: 25px;
+  height: 60vh;
+  margin: 25px auto;
+  position: relative;
+  text-align: center;
+  padding: 50px;
+}
+
+#code {
+  background: white;
+  width: 90%;
+  height: 95%;
+  right: 25px;
+  left: 25px;
+  border-radius: 25px;
+  padding: 25px;
+  resize: none;
+  outline: none;
+}
+
+#pilih ,#pilih-simpan{
+  background: #fff;
+  border: 3px solid black;
+  border-radius: 12px;
+  position: absolute;
+  padding: 25px;
+  transform: translate(-50%,-50%);
+  left: 50%;
+  top: -50%;
+  text-align: center;
+  transition: 1s;
+}
+
+#pilih h2,#pilih-simpan h2{
+  font-size: 35px;
+}
+
+#pilih button, #pilih-simpan button {
+  padding:10px;
+  margin: 12px 0;
+  border: none;
+  border-radius: 6px;
+  color: white;
+  width: 100%;
+  background: #4da;
+  font-size: 30px;
+  transition: 0.3s;
+}
+
+input[type=file]{
+  width: 100%;
+}
+
+#pilih-simpan input{
+  width: 100%;
+  border:none;
+					padding: 6px;
+  border-bottom: solid 2px black;
+  outline: none;
+}
+
+footer {
+  text-align: center;
+  background: #333;
+  color: white;
+  position: fixed;
+  bottom: 0;
+  padding: 12px;
+  left: 0;
+  right: 0;
+  border-top: solid 2px white;
+}
+						</style>
+						<title>TCE</title>
+</head>
+<body>
+						<header>
+												<h1>TRINITY <span>CODE</span> EDITOR</h1>
+						</header>
+						<nav>
+												<button onclick="baru()">Baru</button>
+												<button onclick="mulai_simpan()">Simpan</button>
+												<button onclick="buka()">Buka</button>
+						</nav>
+						<div class="content">
+												<textarea id="code" placeholder="Tuliskan Codinganya !"></textarea>
+												
+						</div>
+						
+						<div id="pilih">
+												<h2>Pilih File</h2><br>
+												<input type="file" id="sumberfile"><br>
+												<button onclick="readFile()">Buka</button>
+												<button onclick="batal()">Batal</button>
+						</div>
+						
+						<div id="pilih-simpan">
+												<h2>Namai File</h2><br>
+												<input type="Text" id="nama" placeholder="Nama.Extensi"><br>
+												<button onclick="simpan()">Simpan</button>
+												<button onclick="batal_simpan()">Batal</button>
+						</div>
+						
+						<footer id="foot">Empety</footer>
+						
+						<script>
+						  
+let code = document.getElementById("code");
+let nama = document.getElementById("nama");
+let foot = document.getElementById("foot");
+
+function baru(){
+	 			code.value = null
+	 			foot.textContent = "Empety"
+	 			nama.value = null
+}
+
+function simpan(){
+					if (nama.value === ""){
+										alert("Isikan Nama File Terlebih Dahulu !")
+					}
+					else{
+					  let blob = new Blob([code.value], {type: "text/plains"})
+					  let link = document.createElement('a')
+					  link.href = URL.createObjectURL(blob)
+					  link.download = nama.value;
+					  link.click()
+						 		foot.textContent = nama.value;
+										let pilih = document.getElementById("pilih-simpan");
+						 		pilih.style.top = "-50%"
+					}
+}
+
+function buka(){
+					let pilih = document.getElementById("pilih");
+					pilih.style.top = "50%"
+}
+
+function batal(){
+					let pilih = document.getElementById("pilih");
+					pilih.style.top = "-50%"
+}
+
+function mulai_simpan(){
+					let pilih = document.getElementById("pilih-simpan");
+					pilih.style.top = "50%"
+}
+
+function batal_simpan(){
+					let pilih = document.getElementById("pilih-simpan");
+					pilih.style.top = "-50%"
+}
+
+function readFile() {
+            const fileInput = document.getElementById('sumberfile');
+            const file = fileInput.files[0];
+            const reader = new FileReader();
+
+            reader.onload = function(e) {
+                const content = e.target.result;
+                code.value = content;
+            };
+
+            if (file) {
+                reader.readAsText(file);
+            				  	let pilih = document.getElementById("pilih");
+            	 			 foot.textContent = fileInput.value;
+            					  pilih.style.top = "-50%"
+            } else {
+                alert('Pilih file terlebih dahulu!');
+            }
+        }
+
+
+						</script>
+</body>
+</html>
