@@ -23,10 +23,12 @@ nav table {
 
 .tools {
     text-align: right;
+    overflow-x: scroll;
 }
 
 .anchor {
     text-align: left;
+    overvlow-x: scroll;
 }
 
 nav {
