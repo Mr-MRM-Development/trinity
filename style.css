@@ -219,6 +219,9 @@ button {
         orphans: unset;
         display: flex;
     }
+    .container button {
+        width: 100%;
+    }
   }
   @media (min-width: 451px) {
 
