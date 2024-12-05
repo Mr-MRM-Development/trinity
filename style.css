@@ -17,18 +17,15 @@ header {
     width: 100%;
 }
 
-nav table {
-    width: 100%;
-}
-
 .tools {
     text-align: right;
-    overflow-x: scroll;
+    display: block;
+    width: 100%;
 }
 
 .anchor {
     text-align: left;
-    overvlow-x: scroll;
+    width: 100%;
 }
 
 nav {
@@ -36,7 +33,7 @@ nav {
     padding: 12px;
     left: 0;
     right: 0%;
-    /* position: fixed; */
+    display: flex;
     top: 0%;
     orphans: unset;
 }
@@ -51,6 +48,7 @@ nav button , nav a{
     text-decoration: none;
     font-size: 25px;
     font-family: cursive;
+    max-height: 31px;
 }
 
 nav button:hover, nav a:hover {
@@ -188,4 +186,40 @@ button {
   @media screen and (max-height: 450px) {
     .sidenav {padding-top: 15px;}
     .sidenav a {font-size: 18px;}
+  }
+
+  @media (max-width: 768px) {
+    .anchor {
+        display: flex;
+        position: fixed;
+        bottom: 0;
+        max-height: 50px;
+        z-index: 100;
+        background: #005;
+        left: 0%;
+        right: 0%;
+        overflow-x: scroll;
+        padding: 5px;
+    }
+    .anchor a {
+        display: inline;
+    }
+    .tools {
+        overflow-x: scroll;
+        height: 50px;
+        display: block;
+        text-align: center;
+    }
+    nav {
+        background: #005;
+        padding: 12px;
+        left: 0;
+        right: 0%;
+        top: 0%;
+        orphans: unset;
+        display: flex;
+    }
+  }
+  @media (min-width: 451px) {
+
   }
