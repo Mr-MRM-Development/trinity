@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="Id">
+<head>
+    <link rel="shortcut icon" href="assets/favicon.png" type="image/x-icon">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Trinity Web</title>
+    
+    <link rel="stylesheet" href="style.css">
+    <!-- Local Style -->
+    <style>
+        .icon {
+            max-width: 150px;
+            padding: 12px 50px;
+            /* border: solid 3px black;
+            background: #fff; */
+            max-height: 150px;
+            margin: 25px 0;
+            /* border-radius: 50%; */
+        }
+        hr {
+            margin: 25px 0;
+        }
+    </style>
+</head>
+<body id="body">
+    <header>
+        <img width="250px" height="auto" src="trinity.png">
+    </header>
+    
+    
+
+    <nav id="Nav">
+        <table>
+            <tr>
+                <td class="anchor">
+                    <button title="Menu" onclick="openNav()"><img src="assets/menu.png"></button>
+                    <a title="Beranda" href="index.html">Beranda</a>
+                    <a title="Kontak" href="kontak.html">Kontak</a>
+                    <a title="Cabang Pengembang" href="#">Cabang Pengembang</a>
+                </td>
+                <td class="tools">
+                    <a title="Rumah" href="home.html"><img src="assets/home.png"></a>
+                    <button title="Cari" onclick="search()"><img src="assets/search.png"></button>
+                    <button title="Tema" onclick="theme()"><img src="assets/dl.png"></button>
+                    <a title="Akun" href="Login/login.html"><img style="border-radius: 100%;" src="assets/avatar/avatar3.png"></a>
+                </td>
+            </tr>
+        </table>
+    </nav>
+    <div class="content">
+        <div class="container" id="container">
+            <div class="editor">
+                <h1>Trinity Code Editor</h1>
+                <img src="Trinity Code/icon.png" class="icon">
+                <!-- <hr> -->
+                <!-- <img src="screenshoots/TCE.png"> -->
+                <p>
+                    Website Ini Lebih Sering Untuk Membuat Back End Daripada Front End, Karena 
+                    Fiturnya Hanya Text Editor.
+                </p>
+                <a href="Trinity Code/index.html" target="_blank">
+                    <Button>Masuk Dan Buat >></Button>
+                </a>
+            </div>
+            <hr>
+            <div class="editor">
+                <h1>Trinity Website Maker</h1>
+                <img src="Trinity Web Maker/favicon.png" class="icon">
+                <!-- <hr> -->
+                <!-- <img src="screenshoots/TWM.png"> -->
+                <p>
+                    Website Ini Seperti Trinity Code Editor, Hanya Ditambah Fitur Mini Website Di Samping Kanan. <br>
+                    Tetapi Ada Kelemahanya, Yaitu Hanya Berfungsi Di Komputer.
+                </p>
+                <a href="Trinity Web Maker/index.html" target="_blank">
+                    <Button>Masuk Dan Buat >></Button>
+                </a>
+            </div>
+            <hr>
+            <div class="editor">
+                <h1>Trinity Studio</h1>
+                <img src="Trinity Studio/favicon.png" class="icon">
+                <!-- <hr> -->
+                <!-- <img src="screenshoots/Trinity Studio.png"> -->
+                <p>
+                    Website Ini Sangat Berguna Dalam Pembuatan Web, Karena Fiturnya Complitible. <br>
+                    Fiturnya Memiliki Code Editor, Mini Website, Dan Terminal.<br>
+                    Kelebihan Trinity Studio Salah Satunya Bisa Di Buka Di Berbagai Media, Bukan Hanya Komputer Dan Laptop. 
+                </p>
+                <a href="Trinity Studio/index.html" target="_blank">
+                    <Button>Masuk Dan Buat >></Button>
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <div id="mySidenav" class="sidenav">
+        <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+        <a href="home.html">Halaman Awal</a>
+        <a href="Trinity Code/index.html">Buat</a>
+        <a href="Login/login.html">Layanan</a>
+        <a href="Trinity Studio/index.html">Coba Trinity Studio</a>
+      </div>
+
+    <script src="dark&light2.js"></script>
+    <script src="main.js"></script>
+</body>
+</html>
+<!--href="Template/Forms/Free/Login/Gambar.PNG"-->

@@ -1,0 +1,94 @@
+*,html {
+    padding: 0%;
+    margin: 0%;
+}
+
+body {
+    background: black;
+    color: white;
+}
+
+.background {
+    width: 100%;
+    left: 0%;
+    right: 0%;
+    height: auto;
+}
+
+nav {
+    background: #015;
+    padding: 12px;
+    left: 0;
+    right: 0%;
+    position: fixed;
+    top: 0%;
+    orphans: unset;
+}
+
+nav table {
+    width: 100%;
+}
+
+nav button , nav a{
+    background: none;
+    border: none;
+    color: white;
+    margin: 0 12px;
+    padding: 6px;
+    transition: 0.3s;
+    text-decoration: none;
+    font-size: 25px;
+    font-family: cursive;
+}
+
+nav button:hover, nav a:hover {
+    background: #fff3;
+    transition: 0.3s;
+}
+
+nav button img, nav a img {
+    height: 25px;
+    width: auto;
+}
+
+.tools {
+    text-align: right;
+}
+
+.anchor {
+    text-align: left;
+}
+
+.container {
+    width: 75%;
+    margin: 25px auto;
+    padding: 25px;
+    border-radius: 12px;
+    background: #333;
+    border: solid 2px white;
+    text-align: center;
+}
+
+.container h1 {
+    text-align: center;
+    padding: 6px 0;
+}
+
+.container p {
+    margin: 50px 0;
+    text-align: left;
+}
+
+.container button {
+    margin: 12px 0;
+    padding: 25px;
+    background: #084;
+    color: white;
+    border: none;
+    width: 50%;
+    transition: 0.3s;
+}
+
+.container button:hover {
+    background: #048;
+}

@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="Id">
+<head>
+    <link rel="shortcut icon" href="assets/favicon.png" type="image/x-icon">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Trinity Web</title>
+    
+    <link rel="stylesheet" href="style.css">
+</head>
+<body id="body">
+    <header>
+        <img width="250px" height="auto" src="trinity.png">
+    </header>
+    <div id="Batas" style="position: absolute; background-color: aqua;">p</div>
+    <nav id="Nav">
+        <table>
+            <tr>
+                <td class="anchor">
+                    <button title="Menu" onclick="menu()"><img src="assets/menu.png"></button>
+                    <a title="Beranda" href="#">Beranda</a>
+                    <a title="Kontak" href="kontak.html">Kontak</a>
+                </td>
+                <td class="tools">
+                    <a title="Rumah" href="#"><img src="assets/home.png"></a>
+                    <button title="Cari" onclick="search()"><img src="assets/search.png"></button>
+                    <button title="Tema" onclick="theme()"><img src="assets/dl.png"></button>
+                    <a title="Akun" href="#"><img style="border-radius: 100%;" src="assets/avatar/avatar3.png"></a>
+                </td>
+            </tr>
+        </table>
+    </nav>
+    <div class="slide" id="slide" hidden>
+        <div class="slide-top">
+            <h3>Menu</h3>
+        </div>
+    </div>
+    <div class="container" id="container">
+        <h1>Pembuka</h1>
+        <hr>
+        <p>
+            Selamat Datang Di Trinity Web.<br>
+            Kami Membuat Dan Mengedit Software, Website Dan Lain Sebagaina.<br>
+            Kami Akan Membantu Anda Dalam Penyediaan Tempelate Halaman, Form 
+            Website Dan Sebagainya. <br>
+
+        </p>
+        <a href="#"><Button>Baca Selengkapnya >></Button></a>
+    </div>
+    <div class="container" id="container2">
+        <h1>Tentang Kami</h1>
+        <hr>
+        <p>
+            Kami Akan Membantu Anda Dalam Penyediaan Tempelate Halaman, Form 
+            Website Dan Sebagainya. <br>
+            Kami Juga Menyediakan Jasa Pambuatan Web. <br>
+            Tempelate Yang Kami Sediakan Bervariasi Mulai Dari Yang Gratis Sampai Yang Berbayar.
+
+        </p>
+        <a href="kontak.html"><Button>Kontak Kami >></Button></a>
+    </div>
+    <div class="container" id="container3">
+        <h1>Tentang Kami</h1>
+        <hr>
+        <p>
+            Kami Juga Menjual Template Dengan Harga Murah <br>
+            Jasa Pambuatan Web Kami Tergantung Kebutuhan. <br>
+            Tempelate Yang Kami Sediakan Bervariasi Mulai Dari Yang Gratis Sampai Yang Berbayar.
+
+        </p>
+        <a href="#"><Button>Lihat Halaman Tempelate >></Button></a>
+    </div>
+
+    <script src="dark&light.js"></script>
+    <script src="main.js"></script>
+</body>
+</html>

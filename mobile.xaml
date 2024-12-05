@@ -1,0 +1,5 @@
+<Window x:class="mobile">
+<gird>
+<label Content="User Active"/> 
+</gird>
+</Window>
