@@ -1,0 +1,119 @@
+*,html{
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  background: #000;
+}
+
+header {
+  padding: 12px 0;
+  background: #222;
+  color: white;
+  text-align: center;
+  font-size: 25px;
+}
+
+header span{
+  color: red;
+}
+
+nav {
+  background: #444;
+  padding: 12px;
+  display: block;
+}
+
+nav button{
+  padding:3px;
+  margin: 0 5px;
+  border: none;
+  background: none;
+  transition: 0.3s;
+}
+
+nav button:hover {
+  background: #555;
+}
+.content {
+  background: #666;
+  border: solid 3px white;
+  border-radius: 25px;
+  height: 60vh;
+  margin: 25px auto;
+  position: relative;
+  text-align: center;
+  padding: 50px;
+}
+
+#code {
+  background: white;
+  width: 90%;
+  height: 95%;
+  right: 25px;
+  left: 25px;
+  border-radius: 25px;
+  padding: 25px;
+  resize: none;
+  outline: none;
+  font-family: monospace;
+  font-size: 25px;
+}
+
+#pilih ,#pilih-simpan{
+  background: #fff;
+  border: 3px solid black;
+  border-radius: 12px;
+  position: absolute;
+  padding: 25px;
+  transform: translate(-50%,-50%);
+  left: 50%;
+  top: -50%;
+  text-align: center;
+  transition: 1s;
+}
+
+#pilih h2,#pilih-simpan h2{
+  font-size: 35px;
+}
+
+#pilih button, #pilih-simpan button {
+  padding:10px;
+  margin: 12px 0;
+  border: none;
+  border-radius: 6px;
+  color: white;
+  width: 100%;
+  background: #4da;
+  font-size: 30px;
+  transition: 0.3s;
+}
+
+input[type=file]{
+  width: 100%;
+}
+
+#pilih-simpan input{
+  width: 100%;
+  border:none;
+  padding: 6px;
+  border-bottom: solid 2px black;
+  outline: none;
+}
+
+footer {
+  text-align: center;
+  background: #333;
+  color: white;
+  position: fixed;
+  bottom: 0;
+  padding: 12px;
+  left: 0;
+  right: 0;
+  border-top: solid 2px white;
+}
+
+nav button img{
+  height: 25px;
+}
