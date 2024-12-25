@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style/index.css">
+    <link rel="shortcut icon" href="../Trinity Studio/assets/icon/svg/tablet.svg" type="image/x-icon">
+    <link rel="stylesheet" href="package/min/vs/editor/editor.main.css">
+
+    <title>Trinity Mobile Website Studio</title>
+</head>
+<body>
+    <nav>
+        <a href="../index.html"><img src="../Trinity Studio/assets/icon/svg/home.svg" alt="Beranda" title="Beranda"></a>
+        <button onclick="baru()" class="navButton"><img src="../Trinity Studio/assets/icon/svg/file-plus.svg" alt="Baru" title="File Baru"></button>
+        <button onclick="buka()" class="navButton"><img src="../Trinity Studio/assets/icon/svg/folder.svg" alt="Buka" title="Buka"></button>
+        <button onclick="mulai_simpan()" class="navButton"><img src="../Trinity Studio/assets/icon/svg/save.svg" alt="Simpan" title="Simpan"></button>
+        <button onclick="Mulai()" id="mulai" class="navButton"><img src="../Trinity Studio/assets/icon/svg/play.svg" alt="Simpan" title="Simpan"></button>
+    </nav>
+    <div class="content">
+        <div class="sidebar" id="sidebar">
+            
+            <!-- tools -->
+            <div class="tools">
+                <button class="accordion">Inputan</button>
+                <div class="panel">
+                    <button onclick="tambahInput('text')">Input Text</button>
+                </div>
+                
+                <button class="accordion">Section 2</button>
+                <div class="panel">
+                <p>Lorem ipsum...</p>
+                </div>
+                
+                <button class="accordion">System</button>
+                <div class="panel">
+                    <button onclick="tambahTombol()">Tombol</button>
+                    <button onclick="tambahIframe()">Frame</button>
+                </div>
+
+                <!-- script -->
+                <script src="script/index-side-tools.js"></script>
+                <script src="script/code-insert.js"></script>
+            </div>
+            <div class="properties">
+                <table class="properties-table" border="2">
+                    <tr>
+                        <th>Name :</th>
+                        <th>Value :</th>
+                    </tr>
+                    <tr>
+                        <td>background</td>
+                        <td><input type="color" id="ipBackgrpound" value="#ffffff"></td>
+                    </tr>
+                    <tr>
+                        <td>color</td>
+                        <td><input type="color" id="ipColor" value="#000000"></td>
+                    </tr>
+                    <tr>
+                        <td>Width</td>
+                        <td><input type="number" id="ipWidth"></td>
+                    </tr>
+                    <tr>
+                        <td>height</td>
+                        <td><input type="number" id="ipHeight"></td>
+                    </tr>
+                    <tr>
+                        <td>value</td>
+                        <td><input type="text" id="ipValue"></td>
+                    </tr>
+                    <tr>
+                        <td>border</td>
+                        <td><input type="number" id="ipBorder"></td>
+                    </tr>
+                    <tr>
+                        <td>border</td>
+                        <td><input type="number" id="ipBorder"></td>
+                    </tr>
+                </table>
+                <button onclick="process()" class="process">Process</button>
+                <script src="script/mobile-properties.js"></script>
+            </div>
+        </div>
+        <div class="code-area" id="codearea">
+            <h2>Code Area</h2>
+            <div class="editor-container">
+                <div class="line-numbers" id="lineNumbers"></div>
+                <div class="code-box">
+                  <textarea id="code" class="code-editor" spellcheck="false"></textarea>
+                  <div id="highlight"></div>
+                </div>
+            </div>
+            
+            <script src="script/index-auto_close.js"></script>
+            <script src="script/index-code.js"></script>
+            <script src="script/index-color-filter.js"></script>
+        </div>
+        <div class="frame">
+            <iframe class="mobile" id="website"></iframe>
+        </div>
+    </div>
+
+    <!-- Menu popup -->
+    <div id="pilih">
+        <h2>Pilih File</h2><br>
+        <input type="file" id="sumberfile"><br>
+        <button onclick="readFile()">Buka</button>
+        <button onclick="batal()">Batal</button>
+    </div>
+    
+    <div id="pilih-simpan">
+        <h2>Namai File</h2><br>
+        <input type="Text" id="nama" placeholder="Nama.Extensi"><br>
+        <button onclick="simpan()">Simpan</button>
+        <button onclick="batal_simpan()">Batal</button>
+    </div>
+
+    <script src="package/min/vs/loader.js"></script>
+    <script src="script/connect.js"></script>
+    <script src="script/index-auto_close.js"></script>
+    <script src="script/index-design.js"></script>
+    <script src="script/index-main.js"></script>
+    
+    <footer>
+
+    </footer>
+</body>
+</html>
