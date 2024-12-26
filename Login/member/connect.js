@@ -16,7 +16,7 @@ document.getElementById('loginForm').addEventListener('submit', function(event) 
     alert('Login Berhasil!');
     
     // Redirect ke halaman index.html setelah login berhasil
-    window.location.href = "index2.html"; // Ganti dengan URL tujuan jika perlu
+    window.location.href = "../../index.html"; // Ganti dengan URL tujuan jika perlu
   } else {
     errorMessage.textContent = 'Username atau password tidak valid!';
   }
