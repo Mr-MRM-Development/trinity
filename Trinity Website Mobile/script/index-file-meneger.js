@@ -105,7 +105,7 @@ let selectedFolder = null;  // Variabel untuk menyimpan folder yang dipilih
         function displayContent(content) {
             const textarea = document.getElementById('code');
             textarea.value = content;
-            highlightHTML();
+        highlightHTML();
         }
 
         // Menangani klik tombol "Download ZIP"
