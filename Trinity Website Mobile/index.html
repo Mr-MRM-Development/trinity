@@ -3,82 +3,38 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style/index.css">
-    <link rel="shortcut icon" href="favicon.webp" type="image/x-icon">
+    <link rel="stylesheet" href="style/index beta.css">
+    <link rel="shortcut icon" href="favicon.png" type="image/x-icon">
     <link rel="stylesheet" href="package/min/vs/editor/editor.main.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jszip/3.7.1/jszip.min.js"></script>
+
 
     <title>Trinity Mobile Website Studio</title>
 </head>
 <body>
     <nav>
-        <a href="../index.html"><img src="../Trinity Studio/assets/icon/svg/home.svg" alt="Beranda" title="Beranda"></a>
-        <button onclick="baru()" class="navButton"><img src="../Trinity Studio/assets/icon/svg/file-plus.svg" alt="Baru" title="File Baru"></button>
-        <button onclick="buka()" class="navButton"><img src="../Trinity Studio/assets/icon/svg/folder.svg" alt="Buka" title="Buka"></button>
-        <button onclick="mulai_simpan()" class="navButton"><img src="../Trinity Studio/assets/icon/svg/save.svg" alt="Simpan" title="Simpan"></button>
-        <button onclick="Mulai()" id="mulai" class="navButton"><img src="../Trinity Studio/assets/icon/svg/play.svg" alt="Simpan" title="Simpan"></button>
+        <a href="../index.html"><img src="assets/icon/svg/home.svg" alt="Beranda" title="Beranda"></a>
+        <button onclick="baru()" class="navButton"><img src="assets/icon/svg/file-plus.svg" alt="Baru" title="File Baru"></button>
+        <button onclick="buka()" class="navButton"><img src="assets/icon/svg/folder.svg" alt="Buka" title="Buka"></button>
+        <button onclick="mulai_simpan()" class="navButton"><img src="assets/icon/svg/save.svg" alt="Simpan" title="Simpan"></button>
+        <button onclick="Mulai()" id="mulai" class="navButton"><img src="assets/icon/svg/play.svg" alt="Simpan" title="Simpan"></button>
     </nav>
     <div class="content">
         <div class="sidebar" id="sidebar">
-            
-            <!-- tools -->
-            <div class="tools">
-                <button class="accordion">Inputan</button>
-                <div class="panel">
-                    <button onclick="tambahInput('text')">Input Text</button>
-                </div>
-                
-                <button class="accordion">Section 2</button>
-                <div class="panel">
-                <p>Lorem ipsum...</p>
-                </div>
-                
-                <button class="accordion">System</button>
-                <div class="panel">
-                    <button onclick="tambahTombol()">Tombol</button>
-                    <button onclick="tambahIframe()">Frame</button>
-                </div>
-
-                <!-- script -->
-                <script src="script/index-side-tools.js"></script>
-                <script src="script/code-insert.js"></script>
+            <div class="navbar">
+                <!-- Tombol untuk mengupload folder -->
+                <button id="upload-folder" title="Upload Folder"><img src="assets/icon/svg/upload.svg"></button>
+                <!-- Tombol untuk membuat file baru -->
+                <button id="new-file" title="New File"><img src="assets/icon/svg/file-plus.svg"></button>
+                <!-- Tombol untuk membuat folder baru -->
+                <button id="new-folder" title="New Folder"><img src="assets/icon/svg/folder-plus.svg"></button>
+                <!-- Tombol untuk mengunduh semua sebagai ZIP -->
+                <button id="download" title="Download ZIP"><img src="assets/icon/svg/download.svg"></button>
             </div>
-            <div class="properties">
-                <table class="properties-table" border="2">
-                    <tr>
-                        <th>Name :</th>
-                        <th>Value :</th>
-                    </tr>
-                    <tr>
-                        <td>background</td>
-                        <td><input type="color" id="ipBackgrpound" value="#ffffff"></td>
-                    </tr>
-                    <tr>
-                        <td>color</td>
-                        <td><input type="color" id="ipColor" value="#000000"></td>
-                    </tr>
-                    <tr>
-                        <td>Width</td>
-                        <td><input type="number" id="ipWidth"></td>
-                    </tr>
-                    <tr>
-                        <td>height</td>
-                        <td><input type="number" id="ipHeight"></td>
-                    </tr>
-                    <tr>
-                        <td>value</td>
-                        <td><input type="text" id="ipValue"></td>
-                    </tr>
-                    <tr>
-                        <td>border</td>
-                        <td><input type="number" id="ipBorder"></td>
-                    </tr>
-                    <tr>
-                        <td>border</td>
-                        <td><input type="number" id="ipBorder"></td>
-                    </tr>
-                </table>
-                <button onclick="process()" class="process">Process</button>
-                <script src="script/mobile-properties.js"></script>
+            <div class="tree-view" id="tree-view">
+                <ul id="file-tree">
+                    <!-- Tree view file dan folder akan dimuat di sini -->
+                </ul>
             </div>
         </div>
         <div class="code-area" id="codearea">
@@ -120,7 +76,7 @@
     <script src="script/index-auto_close.js"></script>
     <script src="script/index-design.js"></script>
     <script src="script/index-main.js"></script>
-    
+    <script src="script/index-file-meneger.js"></script>
     <footer>
 
     </footer>
